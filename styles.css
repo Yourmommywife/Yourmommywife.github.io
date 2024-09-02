@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
     background-color: #f5f5f5;
     color: #333;
+    transition: background-color 0.5s ease;
 }
 
 /* Header */
@@ -21,7 +22,7 @@ body {
 .logo {
     font-size: 28px;
     font-weight: bold;
-    color: #007B5E;
+    color: #333;
 }
 
 .navigation a {
@@ -34,6 +35,71 @@ body {
 
 .navigation a:hover {
     color: #007B5E;
+}
+
+/* Showcase Section */
+.showcase {
+    display: flex;
+    padding: 40px 80px;
+    align-items: center;
+}
+
+.product-selector {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.product-thumb:hover {
+    transform: scale(1.1);
+}
+
+.product-display {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.product-info {
+    max-width: 400px;
+    text-align: left;
+}
+
+.product-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+.product-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: inherit;
+}
+
+.product-price {
+    font-size: 24px;
+    font-weight: bold;
+    color: inherit;
+    margin-bottom: 20px;
 }
 
 .cta-button {
@@ -49,167 +115,4 @@ body {
 
 .cta-button:hover {
     background-color: #005f47;
-}
-
-/* Hero Section */
-.hero {
-    height: 700px;
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero h1 {
-    font-size: 64px;
-    margin-bottom: 20px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-/* Products Section */
-.products {
-    padding: 80px 0;
-    text-align: center;
-    background-color: #fff;
-}
-
-.product {
-    display: inline-block;
-    margin: 20px;
-    width: 300px;
-    text-align: center;
-}
-
-.product img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.product h3 {
-    font-size: 24px;
-    margin-top: 20px;
-    color: #007B5E;
-}
-
-.product p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.price {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #333;
-}
-
-.product .cta-button {
-    margin-top: 20px;
-    width: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 8px;
-    background-color: #007B5E;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.product .cta-button:hover {
-    background-color: #005f47;
-}
-
-/* Testimonials Section */
-.testimonials {
-    padding: 80px 0;
-    background-color: #f8f8f8;
-    text-align: center;
-}
-
-.testimonial {
-    width: 300px;
-    margin: 0 auto 30px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-.testimonial p {
-    font-size: 16px;
-    color: #333;
-}
-
-.testimonial span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #007B5E;
-}
-
-/* Footer */
-.footer {
-    padding: 60px 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-}
-
-.footer .logo {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.footer-links a {
-    margin-right: 15px;
-    font-size: 14px;
-    color: #ccc;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    color: #fff;
-}
-
-.social-media-icons a {
-    font-size: 24px;
-    margin-right: 15px;
-    color: #fff;
-    text-decoration: none;
-}
-
-.social-media-icons a:hover {
-    color: #ccc;
-}
-
-.newsletter input {
-    width: 300px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    margin-bottom: 20px;
-}
-
-.newsletter .cta-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    background-color: #007B5E;
-    color: #fff;
-    border: none;
-    cursor: pointer;
 }
