@@ -46,28 +46,50 @@
     <section id="products" class="products">
         <div class="container products__container">
             <div class="carousel">
+                <!-- Regenerativna Krema -->
                 <div class="carousel__item active" data-cream="regenerativna">
+                    <div class="products__image">
+                        <img src="images/regenerativna.jpg" alt="Regenerativna krema">
+                    </div>
                     <div class="products__text">
                         <h2>Regenerativna</h2>
                         <p>Podstiče regeneraciju kože, čini je glatkom, nahranjenom i podmlađenom.</p>
                         <button class="btn btn--secondary">DODAJ U KORPU</button>
                     </div>
-                    <div class="products__image">
-                        <img src="images/regenerativna.jpg" alt="Regenerativna krema">
-                    </div>
                 </div>
-                <!-- Ponoviti za ostale kreme -->
+                <!-- Hidratantna Krema -->
                 <div class="carousel__item" data-cream="hidratantna">
+                    <div class="products__image">
+                        <img src="images/hidratantna.jpg" alt="Hidratantna krema">
+                    </div>
                     <div class="products__text">
                         <h2>Hidratantna</h2>
                         <p>Održava hidrataciju kože, čineći je mekom i elastičnom.</p>
                         <button class="btn btn--secondary">DODAJ U KORPU</button>
                     </div>
+                </div>
+                <!-- Antireumatska Krema -->
+                <div class="carousel__item" data-cream="antireumatska">
                     <div class="products__image">
-                        <img src="images/hidratantna.jpg" alt="Hidratantna krema">
+                        <img src="images/antireumatska.jpg" alt="Antireumatska krema">
+                    </div>
+                    <div class="products__text">
+                        <h2>Antireumatska</h2>
+                        <p>Pomaže u ublažavanju bolova u zglobovima i mišićima, poboljšava cirkulaciju.</p>
+                        <button class="btn btn--secondary">DODAJ U KORPU</button>
                     </div>
                 </div>
-                <!-- Dodajte još carousel__item divove za svaku kremu -->
+                <!-- Čokoladna Krema -->
+                <div class="carousel__item" data-cream="cokoladna">
+                    <div class="products__image">
+                        <img src="images/cokoladna.jpg" alt="Čokoladna krema">
+                    </div>
+                    <div class="products__text">
+                        <h2>Čokoladna</h2>
+                        <p>Nahranjuje i hidrira kožu, ostavljajući je mekom i osveženom.</p>
+                        <button class="btn btn--secondary">DODAJ U KORPU</button>
+                    </div>
+                </div>
             </div>
             <div class="carousel__controls">
                 <button class="carousel__control carousel__control--prev">&#10094;</button>
@@ -76,7 +98,8 @@
             <div class="carousel__indicators">
                 <span class="carousel__indicator active" data-cream="regenerativna"></span>
                 <span class="carousel__indicator" data-cream="hidratantna"></span>
-                <!-- Dodajte još indikatora za svaku kremu -->
+                <span class="carousel__indicator" data-cream="antireumatska"></span>
+                <span class="carousel__indicator" data-cream="cokoladna"></span>
             </div>
         </div>
     </section>
