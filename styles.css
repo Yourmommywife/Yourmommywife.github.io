@@ -24,12 +24,12 @@ body {
 }
 
 .btn--primary {
-    background-color: #8B5E3C; /* Bogata braon boja */
+    background-color: #226043; /* Originalna zelena boja */
     color: white;
 }
 
 .btn--secondary {
-    background-color: #D5AF30; /* Zlatna boja */
+    background-color: #D5AF30; /* Zlatna boja za "Dodaj u korpu" */
     color: white;
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .logo h1 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 24px;
     font-weight: 700;
     margin: 0;
@@ -74,7 +74,7 @@ body {
     content: '';
     width: 0%;
     height: 2px;
-    background: #8B5E3C;
+    background: #226043;
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -107,10 +107,11 @@ body {
 .hero__text {
     flex: 1;
     max-width: 500px;
+    animation: fadeInLeft 1s ease-in-out;
 }
 
 .hero__text h2 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -126,18 +127,18 @@ body {
 .hero__image {
     flex: 1;
     max-width: 600px;
+    animation: fadeInRight 1s ease-in-out;
 }
 
 .hero__image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    animation: fadeIn 1s ease-in-out;
 }
 
 /* Products Section */
 .products {
-    background-color: #F5F5F5;
+    background-color: #F9F9F9;
     padding: 60px 0;
 }
 
@@ -154,19 +155,29 @@ body {
     display: none;
     align-items: center;
     flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    transition: opacity 0.8s ease-in-out;
 }
 
 .carousel__item.active {
     display: flex;
+    position: relative;
+    opacity: 1;
+}
+
+.carousel__item.inactive {
+    opacity: 0;
 }
 
 .products__text {
     flex: 1;
     max-width: 500px;
+    animation: fadeInUp 0.8s ease-in-out;
 }
 
 .products__text h2 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -182,6 +193,7 @@ body {
 .products__image {
     flex: 1;
     max-width: 500px;
+    animation: fadeInDown 0.8s ease-in-out;
 }
 
 .products__image img {
@@ -199,13 +211,18 @@ body {
 }
 
 .carousel__control {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.8);
     border: none;
-    color: white;
+    color: #226043;
     font-size: 30px;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 50%;
+    margin: 0 10px;
+}
+
+.carousel__control:hover {
+    background: rgba(255, 255, 255, 1);
 }
 
 .carousel__indicators {
@@ -224,12 +241,12 @@ body {
 }
 
 .carousel__indicator.active {
-    background-color: #8B5E3C;
+    background-color: #226043;
 }
 
 /* Social Proof Section */
 .social-proof {
-    background-color: #8B5E3C;
+    background-color: #226043;
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -238,6 +255,7 @@ body {
 .social-proof h2 {
     font-size: 36px;
     margin-bottom: 40px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .testimonials {
@@ -248,12 +266,20 @@ body {
 }
 
 .testimonial {
-    background-color: #F5F5F5;
+    background-color: #F9F9F9;
     color: #1E1E1E;
     padding: 20px;
     border-radius: 10px;
     max-width: 300px;
-    animation: slideInUp 0.5s ease-in-out;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.testimonial p {
+    margin: 0 0 10px;
+}
+
+.testimonial strong {
+    color: #226043;
 }
 
 /* Footer */
@@ -275,7 +301,7 @@ body {
 }
 
 .footer__logo-contact h3 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 24px;
     font-weight: 700;
 }
@@ -292,7 +318,7 @@ body {
 }
 
 .footer__links h4 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 18px;
     line-height: 28px;
 }
@@ -311,7 +337,7 @@ body {
 }
 
 .footer__links a:hover {
-    color: #8B5E3C;
+    color: #226043;
 }
 
 .footer__subscribe {
@@ -320,7 +346,7 @@ body {
 }
 
 .footer__subscribe h4 {
-    color: #8B5E3C;
+    color: #226043;
     font-size: 18px;
     line-height: 28px;
 }
@@ -345,7 +371,7 @@ body {
 
 .footer__subscribe button {
     padding: 10px;
-    background-color: #8B5E3C;
+    background-color: #226043;
     color: white;
     border: none;
     border-radius: 0 6px 6px 0;
@@ -367,9 +393,24 @@ body {
     to { opacity: 1; }
 }
 
-@keyframes slideInUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive Styles */
