@@ -1,31 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Spirit Handmade - Prirodne Kreme</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Footer Example</title>
 </head>
 <body>
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">Spirit Handmade</div>
-            <nav class="footer-links">
-                <a href="#">O nama</a>
-                <a href="#">Proizvodi</a>
-                <a href="#">Kontakt</a>
-            </nav>
-            <div class="footer-social-media">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Spirit Handmade</h1>
             </div>
-            <div class="footer-newsletter">
-                <input type="email" placeholder="Vaš email">
-                <button class="subscribe-button">Prijavi se</button>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#products">Proizvodi</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" placeholder="Search">
             </div>
         </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h2>Tvoja nega kože</h2>
+                <p>Naša biljna kozmetika pruža dubinsku negu i zaštitu, pomažući tvojoj koži da ostane zdrava i mladolika.</p>
+                <a href="#products" class="btn">Pogledaj ponudu</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="Prirodne kreme">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Regenerativna</h2>
+            <p>Podstiče regeneraciju kože, čini je glatkom, nahranjenom i podmlađenom.</p>
+            <div class="product-gallery">
+                <div class="product-item">
+                    <img src="images/regenerativna.jpg" alt="Regenerativna krema">
+                    <p>Regenerativna</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/cokoladna.jpg" alt="Čokoladna krema">
+                    <p>Čokoladna</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/hidratantna.jpg" alt="Hidratantna krema">
+                    <p>Hidratantna</p>
+                </div>
+                <div class="product-item">
+                    <img src="images/antireumatska.jpg" alt="Antireumatska krema">
+                    <p>Antireumatska</p>
+                </div>
+            </div>
+            <button class="btn">DODAJ U KORPU</button>
+        </div>
+    </section>
+
+    <!-- Social Approval Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2>Šta kažu naši kupci</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Ova krema je promenila moju kožu! Nikad nisam imala tako mekanu i sjajnu kožu."</p>
+                    <p>- Jelena P.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Prirodni sastojci zaista čine razliku. Preporučujem svima!"</p>
+                    <p>- Marko S.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Najbolja nega kože koju sam ikada probala. Hvala Spirit Handmade!"</p>
+                    <p>- Ana M.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo-contact">
+                <h3>Spirit Handmade</h3>
+                <p>+381 63 331 737</p>
+                <p>spirit@lift.agency</p>
+            </div>
+            <div class="footer-links">
+                <h4>Brzi linkovi</h4>
+                <ul>
+                    <li><a href="#about">O nama</a></li>
+                    <li><a href="#products">Proizvodi</a></li>
+                    <li><a href="https://www.instagram.com">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com">TikTok</a></li>
+                </ul>
+            </div>
+            <div class="footer-subscribe">
+                <h4>Subscribe</h4>
+                <p>Obaveštenja o akcijama</p>
+                <form>
+                    <input type="email" placeholder="Vaš email">
+                    <button type="submit">Prijavi se</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Spirit Handmade. All rights reserved</p>
+            <p>Prirodni proizvodi</p>
+        </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
